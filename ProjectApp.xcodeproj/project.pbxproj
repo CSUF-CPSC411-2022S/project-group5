@@ -14,6 +14,7 @@
 		920625B827C6B6E4008BE8B5 /* ProjectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625B727C6B6E4008BE8B5 /* ProjectAppTests.swift */; };
 		920625C227C6B6E5008BE8B5 /* ProjectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625C127C6B6E5008BE8B5 /* ProjectAppUITests.swift */; };
 		920625C427C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625C327C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift */; };
+		920625D127C6B7AA008BE8B5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 920625D027C6B7AA008BE8B5 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		920625BD27C6B6E5008BE8B5 /* ProjectAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		920625C127C6B6E5008BE8B5 /* ProjectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppUITests.swift; sourceTree = "<group>"; };
 		920625C327C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		920625D027C6B7AA008BE8B5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		9206259A27C6B6E2008BE8B5 = {
 			isa = PBXGroup;
 			children = (
+				920625D027C6B7AA008BE8B5 /* .gitignore */,
 				920625A527C6B6E3008BE8B5 /* ProjectApp */,
 				920625B627C6B6E4008BE8B5 /* ProjectAppTests */,
 				920625C027C6B6E5008BE8B5 /* ProjectAppUITests */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				920625AE27C6B6E4008BE8B5 /* Preview Assets.xcassets in Resources */,
+				920625D127C6B7AA008BE8B5 /* .gitignore in Resources */,
 				920625AB27C6B6E4008BE8B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
