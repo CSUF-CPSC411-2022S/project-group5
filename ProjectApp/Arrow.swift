@@ -21,7 +21,7 @@ struct Arrow {
     var Coords: [String: [Float]] = [:]
     var LatDir: Directions {
         get {
-            if Coords["AnchorOne"]![0] - Coords["AnchorTwo"]![0] < 0 {
+            if Coords["AnchorOne"]![0] + Coords["AnchorTwo"]![0] < 0 {
                 return Directions.West
             }
             return Directions.East
@@ -29,7 +29,7 @@ struct Arrow {
     }
     var LongDir: Directions {
         get {
-            if Coords["AnchorOne"]![1] - Coords["AnchorTwo"]![1] < 0 {
+            if Coords["AnchorOne"]![1] + Coords["AnchorTwo"]![1] < 0 {
                 return Directions.South
             }
             return Directions.North

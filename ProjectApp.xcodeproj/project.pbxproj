@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		8133A3B527DC69F7000FD4D8 /* Arrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
-		8133A3B727DC6A28000FD4D8 /* ArrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrowTests.swift; path = "/Users/jacobnguyen/CPSC411/project-group5/ProjectAppTests/ArrowTests.swift"; sourceTree = "<absolute>"; };
+		8133A3B727DC6A28000FD4D8 /* ArrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowTests.swift; sourceTree = "<group>"; };
 		81B6672A27D9DED600901660 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		920625A327C6B6E3008BE8B5 /* ProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		920625A627C6B6E3008BE8B5 /* ProjectAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppApp.swift; sourceTree = "<group>"; };
