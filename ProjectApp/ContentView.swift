@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var campusMap: [Building] = [
-        Building(named: "McCarthy Hall", for: "Math and science classes", at: Coordinates(lat: 5, long: 2)),
-        Building(named: "Pollak Library", for: "Studying and reading", at: Coordinates(lat: 5, long: 5)),
-        Building(named: "Titan Student Union", for: "Getting food, hanging out, studying", at: Coordinates(lat: 1, long: 5)),
-        Building(named: "The Gastronome", for: "Cafeteria for dorms", at: Coordinates(lat: 8, long: 8)),
-        Building(named: "Computer Science Building", for: "Computer science classes", at: Coordinates(lat: 6.5, long: 6)),
-        Building(named: "Engineering Building", for: "Engineering, math, and CS classes", at: Coordinates(lat: 6, long: 6))
+        Building(named: "McCarthy Hall", for: "Home to math and science classes.", at: Coordinates(lat: 5, long: 2)),
+        Building(named: "Pollak Library", for: "A great place to study, read, and get papers printed. Has a Starbucks coffee shop on the ground floor.", at: Coordinates(lat: 5, long: 5)),
+        Building(named: "Titan Student Union", for: "A great place to hang out or study. Has a food court, bowling, and other activities.", at: Coordinates(lat: 1, long: 5)),
+        Building(named: "The Gastronome", for: "The cafeteria for the dorm meal plans. Serves a wide variety of food for breakfast, lunch, and dinner.", at: Coordinates(lat: 8, long: 8)),
+        Building(named: "Computer Science Building", for: "Home to mostly computer science classes and related courses.", at: Coordinates(lat: 6.5, long: 6)),
+        Building(named: "Engineering Building", for: "Home to mostly engineering classes and related courses.", at: Coordinates(lat: 6, long: 6))
     ]
     @StateObject var agent = MapAgent(coords: Coordinates(lat: 5.0, long: 5.0), dir: 90, range: 2)
     
@@ -47,18 +47,16 @@ struct NearbyBuildingOutlineGroup: View {
     @EnvironmentObject var agent: MapAgent
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List(buildings, id: \.name) {
-                    building in
-                    if agent.isInRangeOf(otherCoords: building.coordinates) {
-                        NavigationLink(destination: NearbyBuildingInfo(description: building.description, distance: agent.coordinates.distanceTo(otherCoords: building.coordinates))) {
-                            Text(building.name)
-                        }
+        VStack {
+            List(buildings, id: \.name) {
+                building in
+                if agent.isInRangeOf(otherCoords: building.coordinates) {
+                    NavigationLink(destination: NearbyBuildingInfo(description: building.description, distance: agent.coordinates.distanceTo(otherCoords: building.coordinates))) {
+                        Text(building.name)
                     }
                 }
-                Spacer()
             }
+            Spacer()
         }
     }
 }
@@ -70,7 +68,7 @@ struct NearbyBuildingInfo: View {
     var body: some View {
         VStack {
             Text("Building description: \(description)")
-            Text("Distance: \(distance) units")
+            Text("Distance: \(String(format: "%.2f", distance)) units")
         }
     }
 }
