@@ -12,19 +12,9 @@ class Building {
     var description: String
     var coordinates: Coordinates
     
-    init(named name: String = "", is description: String = "", at coordinates: Coordinates = Coordinates()) {
+    init(named name: String = "", for description: String = "", at coordinates: Coordinates = Coordinates()) {
         self.name = name;
         self.description = description;
         self.coordinates = coordinates;
-    }
-}
-
-struct Coordinates {
-    var longitude: Double
-    var latitude: Double
-    
-    init(longitude: Double = 0.0, latitude: Double = 0.0) {
-        self.longitude = longitude
-        self.latitude = latitude
     }
 }

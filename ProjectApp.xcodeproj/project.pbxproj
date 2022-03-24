@@ -17,6 +17,7 @@
 		920625D127C6B7AA008BE8B5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 920625D027C6B7AA008BE8B5 /* .gitignore */; };
 		92A171A727D9FD6E005D4E7D /* MapAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A171A627D9FD6E005D4E7D /* MapAgent.swift */; };
 		92A82BC327C6FD2300473601 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A82BC227C6FD2300473601 /* Building.swift */; };
+		92FC976027EC5A8A007C7014 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC975F27EC5A8A007C7014 /* Coordinates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		920625D027C6B7AA008BE8B5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		92A171A627D9FD6E005D4E7D /* MapAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAgent.swift; sourceTree = "<group>"; };
 		92A82BC227C6FD2300473601 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		92FC975F27EC5A8A007C7014 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				920625AA27C6B6E4008BE8B5 /* Assets.xcassets */,
 				920625AC27C6B6E4008BE8B5 /* Preview Content */,
 				92A82BC227C6FD2300473601 /* Building.swift */,
+				92FC975F27EC5A8A007C7014 /* Coordinates.swift */,
 				92A171A627D9FD6E005D4E7D /* MapAgent.swift */,
 			);
 			path = ProjectApp;
@@ -271,6 +274,7 @@
 				92A82BC327C6FD2300473601 /* Building.swift in Sources */,
 				92A171A727D9FD6E005D4E7D /* MapAgent.swift in Sources */,
 				920625A727C6B6E3008BE8B5 /* ProjectAppApp.swift in Sources */,
+				92FC976027EC5A8A007C7014 /* Coordinates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
