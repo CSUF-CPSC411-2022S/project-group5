@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8133A3B627DC69F7000FD4D8 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133A3B527DC69F7000FD4D8 /* Arrow.swift */; };
-		8133A3B827DC6A28000FD4D8 /* ArrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133A3B727DC6A28000FD4D8 /* ArrowTests.swift */; };
-		8133A3B927DC6B72000FD4D8 /* ArrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133A3B727DC6A28000FD4D8 /* ArrowTests.swift */; };
-		8133A3BA27DC6B77000FD4D8 /* ArrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133A3B727DC6A28000FD4D8 /* ArrowTests.swift */; };
-		81B6672B27D9DED600901660 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 81B6672A27D9DED600901660 /* Experience.rcproject */; };
+		81B2014927ED3E850006A55B /* ArrowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2014827ED3E850006A55B /* ArrowTest.swift */; };
+		81B2014C27ED54C60006A55B /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2014B27ED54C60006A55B /* Arrow.swift */; };
+		81B2014D27EDA9960006A55B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 81B2014F27EDA9960006A55B /* Experience.rcproject */; };
 		920625A727C6B6E3008BE8B5 /* ProjectAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625A627C6B6E3008BE8B5 /* ProjectAppApp.swift */; };
 		920625A927C6B6E3008BE8B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625A827C6B6E3008BE8B5 /* ContentView.swift */; };
 		920625AB27C6B6E4008BE8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920625AA27C6B6E4008BE8B5 /* Assets.xcassets */; };
@@ -40,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8133A3B527DC69F7000FD4D8 /* Arrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
-		8133A3B727DC6A28000FD4D8 /* ArrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowTests.swift; sourceTree = "<group>"; };
-		81B6672A27D9DED600901660 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		81B2014827ED3E850006A55B /* ArrowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowTest.swift; sourceTree = "<group>"; };
+		81B2014B27ED54C60006A55B /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		81B2015027EDAA5E0006A55B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = en; path = en.lproj/Experience.rcproject; sourceTree = "<group>"; };
 		920625A327C6B6E3008BE8B5 /* ProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		920625A627C6B6E3008BE8B5 /* ProjectAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppApp.swift; sourceTree = "<group>"; };
 		920625A827C6B6E3008BE8B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				920625A627C6B6E3008BE8B5 /* ProjectAppApp.swift */,
-				8133A3B527DC69F7000FD4D8 /* Arrow.swift */,
-				81B6672A27D9DED600901660 /* Experience.rcproject */,
+				81B2014B27ED54C60006A55B /* Arrow.swift */,
+				81B2014F27EDA9960006A55B /* Experience.rcproject */,
 				920625A827C6B6E3008BE8B5 /* ContentView.swift */,
 				920625AA27C6B6E4008BE8B5 /* Assets.xcassets */,
 				920625AC27C6B6E4008BE8B5 /* Preview Content */,
@@ -127,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				920625B727C6B6E4008BE8B5 /* ProjectAppTests.swift */,
-				8133A3B727DC6A28000FD4D8 /* ArrowTests.swift */,
+				81B2014827ED3E850006A55B /* ArrowTest.swift */,
 			);
 			path = ProjectAppTests;
 			sourceTree = "<group>";
@@ -272,10 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8133A3BA27DC6B77000FD4D8 /* ArrowTests.swift in Sources */,
 				920625A927C6B6E3008BE8B5 /* ContentView.swift in Sources */,
-				8133A3B627DC69F7000FD4D8 /* Arrow.swift in Sources */,
-				81B6672B27D9DED600901660 /* Experience.rcproject in Sources */,
+				81B2014C27ED54C60006A55B /* Arrow.swift in Sources */,
+				81B2014D27EDA9960006A55B /* Experience.rcproject in Sources */,
 				920625A727C6B6E3008BE8B5 /* ProjectAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,8 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B2014927ED3E850006A55B /* ArrowTest.swift in Sources */,
 				920625B827C6B6E4008BE8B5 /* ProjectAppTests.swift in Sources */,
-				8133A3B827DC6A28000FD4D8 /* ArrowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +292,6 @@
 			files = (
 				920625C427C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift in Sources */,
 				920625C227C6B6E5008BE8B5 /* ProjectAppUITests.swift in Sources */,
-				8133A3B927DC6B72000FD4D8 /* ArrowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +309,17 @@
 			targetProxy = 920625BE27C6B6E5008BE8B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81B2014F27EDA9960006A55B /* Experience.rcproject */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B2015027EDAA5E0006A55B /* en */,
+			);
+			name = Experience.rcproject;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		920625C527C6B6E5008BE8B5 /* Debug */ = {

@@ -21,33 +21,77 @@
               "material" : "concrete",
               "overrides" : {
                 "children" : {
-                  "4A213441-135C-450E-8EF8-1A4EAB267C1D" : {
+                  "4A213441-135C-450E-8EF8-1A4EAB267C1D" : null,
+                  "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
+                  "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
+                  "4400DD91-9172-403C-963C-0F6CB10F8EA5" : null,
+                  "9757E1AC-2234-4623-AE7D-84357756CE9D" : {
                     "overrides" : {
                       "arguments" : [
                         [
-                          "material",
+                          "depth",
                           {
-                            "typeName" : "String",
-                            "value" : "gold"
+                            "typeName" : "Double",
+                            "value" : 0.01
                           }
                         ],
                         [
-                          "type",
+                          "headLength",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.25
+                          }
+                        ],
+                        [
+                          "indent",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.25
+                          }
+                        ],
+                        [
+                          "length",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.080000000000000002
+                          }
+                        ],
+                        [
+                          "materialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              1,
+                              1,
+                              0.20000000298023224,
+                              1
+                            ]
+                          }
+                        ],
+                        [
+                          "profile",
                           {
                             "typeName" : "String",
-                            "value" : "box"
+                            "value" : "rectangular"
+                          }
+                        ],
+                        [
+                          "tailType",
+                          {
+                            "typeName" : "String",
+                            "value" : "straight"
                           }
                         ],
                         [
                           "width",
                           {
                             "typeName" : "Double",
-                            "value" : 0.4356916007920143
+                            "value" : 0.25
                           }
                         ]
                       ],
                       "factory" : {
-                        "identifier" : "com.apple.rc.af.CoreAssetFactories.PrimitiveShapeAssetFactory",
+                        "identifier" : "com.apple.rc.af.CoreAssetFactories.ArrowAssetFactory",
                         "version" : "1.0"
                       },
                       "runtimeAttributes" : [
@@ -55,41 +99,39 @@
                           "RuntimeIdentifier",
                           {
                             "typeName" : "UUID",
-                            "value" : "3788A5B5-0388-488A-8304-7B90FEBA6FAC"
+                            "value" : "16502EE6-3872-4ADD-A9C0-716BFBD2E036"
                           }
                         ],
                         [
                           "entityName",
                           {
                             "typeName" : "String",
-                            "value" : "Steel Box"
+                            "value" : "arrowYellow"
                           }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        1,
+                        7.3747202122831368e-08,
+                        1.2372726202011108,
+                        3.6873601061415684e-08,
                         0,
+                        3.6873604614129363e-08,
+                        1.4749441845651745e-07,
+                        -1.2372727394104004,
                         0,
+                        -1.2372733354568481,
+                        -3.6873622377697757e-08,
+                        7.3747244755395513e-08,
                         0,
-                        0,
-                        1,
-                        0,
-                        0,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                        0.05000000074505806,
-                        0,
+                        -0.024168431758880615,
+                        0.1596883237361908,
+                        -0.14807331562042236,
                         1
                       ]
                     }
                   },
-                  "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
-                  "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
                   "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null
                 },
                 "factory" : null,
@@ -107,21 +149,21 @@
               "title" : "Box",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.99952507019042969,
-                  1.862645371275562e-09,
-                  0.030816139653325081,
+                  0.88648116588592529,
+                  7.4505798863810924e-08,
+                  -0.46276453137397766,
                   0,
-                  0.0094729866832494736,
-                  0.95157921314239502,
-                  -0.30725741386413574,
+                  -0.17142577469348907,
+                  0.92885702848434448,
+                  -0.32838660478591919,
                   0,
-                  -0.029323998838663101,
-                  0.30740344524383545,
-                  0.95112729072570801,
+                  0.4298420250415802,
+                  0.3704383373260498,
+                  0.82341432571411133,
                   0,
-                  -0.056463610380887985,
-                  0.59190815687179565,
-                  1.8314039707183838,
+                  0.47995471954345703,
+                  0.36931532621383667,
+                  0.67602354288101196,
                   1
                 ],
                 "sceneTransform" : [

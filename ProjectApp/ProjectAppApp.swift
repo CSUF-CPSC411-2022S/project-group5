@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 @main
 struct ProjectAppApp: App {
@@ -15,3 +16,5 @@ struct ProjectAppApp: App {
         }
     }
 }
+
+
