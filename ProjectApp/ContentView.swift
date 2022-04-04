@@ -16,78 +16,94 @@ struct ContentView: View {
             
             
     var body: some View {
-        // TODO: Enclose this entire VStack with GeometryReader in Model 3
         
-        
-        GeometryReader { geometry in
-            VStack {
-                // TODO: Add frame method call to this VStack in Model 3
+        NavigationView {
+            GeometryReader { geometry in
                 VStack {
-                    //Text("SafeWalk Volunteer")//.font(.headline)
-                    Text("Welcome to AppName :)")
-                        .fontWeight(.bold)
-                        .modifier(TourforAppName())
+                   
+                    VStack {
+                        //Text("SafeWalk Volunteer")//.font(.headline)
+                        Text("Welcome to AppName :)")
+                            .fontWeight(.bold)
+    
+                            .modifier(WelcomeToAppName())
+                           
 
-                    
-                    HStack {
-                        Spacer()
-                        Text("Name: ").modifier(NameText())
-                        TextField("Name", text: $name)
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        Text("Major: ").modifier(MajorText())
-                        TextField("Major", text: $major)
-                        Spacer()
-                    }
-                    
-                    
-                    // starting point for ID sample display
-                    VStack {
-                        Text("Tour Pass" )
-                            .fontWeight(.bold)
-                            .modifier(TourforAppName())
-                        
-                    }
-                    
-                    VStack {
-                        Text("Virtual Tour | CSUF")
-                            .fontWeight(.bold)
-                            .modifier(TitleText())
-                            
                         
                         HStack {
-                           
-                            Text("🤓").modifier(emojiText())
-                            VStack{
-                                HStack {
-                                    Spacer()
-                                    TextField("Name", text: $name)
-                                    Spacer()
-                                }
-                                HStack {
-                                    Spacer()
-                                    Text("Major: ").fontWeight(.bold)
-                                    TextField("Major", text:$major)
-                                    Spacer()
-                                }
-                                
-                            }
+                            Spacer()
+                            Text("Name: ").modifier(NameText())
+                            TextField("Name", text: $name)
+                            Spacer()
+                        }
+                      
+                        
+                        HStack {
+                            Spacer()
+                            Text("Major: ").modifier(MajorText())
+                            TextField("Major", text: $major)
+                            Spacer()
+                            
                         }
                         
                         
-                    }.modifier(IdSampleText())
+                        // starting point for ID sample display
+                        VStack {
+                            Text("🌟Tour Pass🌟" )
+                                .fontWeight(.bold)
+                                .modifier(TourPass())
+                                
+                            
+                        }
                         
                         
-                }
-            }.frame(height: geometry.size.height / 1)
-                Spacer()
-                
+                        VStack {
+                            Text("Virtual Tour | CSUF")
+                                .fontWeight(.bold)
+                                .modifier(TitleText())
+                                
+                            
+                            HStack {
+                               
+                                Text("🤓").modifier(emojiText())
+                                VStack{
+                                    HStack {
+                                        Spacer()
+                                        TextField("Name", text: $name)
+                                        Spacer()
+                                    }
+                                    HStack {
+                                        Spacer()
+                                        Text("Major: ").fontWeight(.bold)
+                                        TextField("Major", text:$major)
+                                        Spacer()
+                                    }
+                                    
+                                }
+                            }
+                        }.modifier(IdSampleText())
+                            
+                            
+                    }
+                    
+                    //adding"starting tour button", going to next page once clicked
+                    VStack{
+                        NavigationLink(destination: AppInfoOutline()) {
+                            
+                            Text("Begin the Tour").font(.footnote).modifier(ButtonDesign())
+                    
+                        }
+                            
+                    }
+                                
+                    Spacer()
+                }.frame(height: geometry.size.height / 1)
+                    Spacer()
+                    
+            }
         }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -95,17 +111,29 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct TourforAppName: ViewModifier {
+struct WelcomeToAppName: ViewModifier {
    func body(content: Content) -> some View {
         content
            .font(.custom("Courier New", size: 20))
            .foregroundColor(Color.white)
            .padding()
-           .background(Color.gray)
+           .background(Color.black)
            .cornerRadius(10)
    }
 }
 
+struct TourPass: ViewModifier {
+   func body(content: Content) -> some View {
+        content
+           .font(.custom("Courier New", size: 20))
+           .foregroundColor(Color.white)
+           .padding()
+           .background(Color.brown)
+           .cornerRadius(10)
+           .padding(.top, 120.0)
+           .hueRotation(Angle(degrees: 50))
+   }
+}
 //emoji custom view modifier
 struct emojiText: ViewModifier {
     func body(content: Content) -> some View {
@@ -114,7 +142,10 @@ struct emojiText: ViewModifier {
            .foregroundColor(Color.black)
            .padding()
            .background(Color.brown.brightness(10))
-           .cornerRadius(10)
+           .cornerRadius(60)
+           .grayscale(/*@START_MENU_TOKEN@*/1.5/*@END_MENU_TOKEN@*/)
+           .hueRotation(Angle(degrees: 40))
+           
     }
 }
 //"Virtual Tour| CSUF" text in the ID sample box
@@ -142,6 +173,7 @@ struct IdSampleText: ViewModifier {
            .background(Color.brown)
            .cornerRadius(10)
            .padding(15)
+           .hueRotation(Angle(degrees: 50))
     }
 }
 
@@ -167,3 +199,17 @@ struct MajorText: ViewModifier {
     }
 }
 
+}
+
+
+
+struct ButtonDesign: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(Color.black)
+            .foregroundColor(Color.white)
+            .cornerRadius(10)
+            
+    }
+}
