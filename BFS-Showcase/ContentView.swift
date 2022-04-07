@@ -8,11 +8,14 @@
 import SwiftUI
 import Combine
 
+
 struct ContentView: View {
     
     @State var pathTiles:Array<MazeLocation> = []
     @State var currentPos:MazeLocation = MazeLocation(row: 0, col: 0)
     @State var selectedNumber:Int = 0
+    @SceneStorage ("StartX") var startX : String = ""
+    @SceneStorage ("StartY") var startY: String = ""
     var map:Array<Int> = [
         1, 1, 1, 1, 1, 1, 1, 1,
         1, 0, 0, 0, 1, 0, 0, 1,
@@ -54,7 +57,7 @@ struct ContentView: View {
         if _index == 63 {
             color = Color.red
         }
-        if _index == 0 {
+        if _index == Int(startY) && innerIndex == Int(startX){
             color = Color.green
         }
         
@@ -68,7 +71,7 @@ struct ContentView: View {
     
     func getPath(endPath:MazeLocation) {
         self.pathTiles.removeAll()
-        let path = BFS().findPath(start:MazeLocation(row: 0,col:0), end:MazeLocation(row:endPath.row,col:endPath.col))
+        let path = BFS().findPath(start:MazeLocation(row: Int(startX) ?? 0,col:Int(startY) ?? 0), end:MazeLocation(row:endPath.row,col:endPath.col))
         self.pathTiles = path
     }
     
@@ -102,6 +105,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 0){
+            Text("Please input starting coordinates")
+            TextField("Start point X", text: $startX)
+            TextField("Start point Y", text: $startY)
             ForEach(0..<8, id: \.self) { index in
                 HStack(spacing: 0){
                     ForEach(0..<8, id: \.self) { innerIndex in
