@@ -16,7 +16,18 @@
 		42DE281A25BD69A20060FC20 /* GridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE281925BD69A20060FC20 /* GridNode.swift */; };
 		42DE281D25BD69C40060FC20 /* MazeLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE281C25BD69C40060FC20 /* MazeLocation.swift */; };
 		42DE282025BD70560060FC20 /* FloodFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE281F25BD70560060FC20 /* FloodFill.swift */; };
+		7A4240E327FFBA5A00594598 /* BFS_ShowcaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4240E227FFBA5A00594598 /* BFS_ShowcaseTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A4240E427FFBA5A00594598 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DE27F825BD5FC60060FC20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42DE27FF25BD5FC60060FC20;
+			remoteInfo = "BFS-Showcase";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		42DE280025BD5FC70060FC20 /* BFS-Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFS-Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +41,19 @@
 		42DE281925BD69A20060FC20 /* GridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridNode.swift; sourceTree = "<group>"; };
 		42DE281C25BD69C40060FC20 /* MazeLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeLocation.swift; sourceTree = "<group>"; };
 		42DE281F25BD70560060FC20 /* FloodFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodFill.swift; sourceTree = "<group>"; };
+		7A4240E027FFBA5A00594598 /* BFS-ShowcaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BFS-ShowcaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4240E227FFBA5A00594598 /* BFS_ShowcaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS_ShowcaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		42DE27FD25BD5FC60060FC20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4240DD27FFBA5A00594598 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				42DE280225BD5FC70060FC20 /* BFS-Showcase */,
+				7A4240E127FFBA5A00594598 /* BFS-ShowcaseTests */,
 				42DE280125BD5FC70060FC20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				42DE280025BD5FC70060FC20 /* BFS-Showcase.app */,
+				7A4240E027FFBA5A00594598 /* BFS-ShowcaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +106,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7A4240E127FFBA5A00594598 /* BFS-ShowcaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A4240E227FFBA5A00594598 /* BFS_ShowcaseTests.swift */,
+			);
+			path = "BFS-ShowcaseTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,17 +134,39 @@
 			productReference = 42DE280025BD5FC70060FC20 /* BFS-Showcase.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7A4240DF27FFBA5A00594598 /* BFS-ShowcaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4240E627FFBA5A00594598 /* Build configuration list for PBXNativeTarget "BFS-ShowcaseTests" */;
+			buildPhases = (
+				7A4240DC27FFBA5A00594598 /* Sources */,
+				7A4240DD27FFBA5A00594598 /* Frameworks */,
+				7A4240DE27FFBA5A00594598 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A4240E527FFBA5A00594598 /* PBXTargetDependency */,
+			);
+			name = "BFS-ShowcaseTests";
+			productName = "BFS-ShowcaseTests";
+			productReference = 7A4240E027FFBA5A00594598 /* BFS-ShowcaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		42DE27F825BD5FC60060FC20 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					42DE27FF25BD5FC60060FC20 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					7A4240DF27FFBA5A00594598 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 42DE27FF25BD5FC60060FC20;
 					};
 				};
 			};
@@ -132,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				42DE27FF25BD5FC60060FC20 /* BFS-Showcase */,
+				7A4240DF27FFBA5A00594598 /* BFS-ShowcaseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +196,13 @@
 			files = (
 				42DE280B25BD5FCA0060FC20 /* Preview Assets.xcassets in Resources */,
 				42DE280825BD5FCA0060FC20 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4240DE27FFBA5A00594598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A4240DC27FFBA5A00594598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4240E327FFBA5A00594598 /* BFS_ShowcaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A4240E527FFBA5A00594598 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42DE27FF25BD5FC60060FC20 /* BFS-Showcase */;
+			targetProxy = 7A4240E427FFBA5A00594598 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		42DE280D25BD5FCA0060FC20 /* Debug */ = {
@@ -326,6 +402,44 @@
 			};
 			name = Release;
 		};
+		7A4240E727FFBA5A00594598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "PTH.BFS-ShowcaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BFS-Showcase.app/BFS-Showcase";
+			};
+			name = Debug;
+		};
+		7A4240E827FFBA5A00594598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "PTH.BFS-ShowcaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BFS-Showcase.app/BFS-Showcase";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -343,6 +457,15 @@
 			buildConfigurations = (
 				42DE281025BD5FCA0060FC20 /* Debug */,
 				42DE281125BD5FCA0060FC20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A4240E627FFBA5A00594598 /* Build configuration list for PBXNativeTarget "BFS-ShowcaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4240E727FFBA5A00594598 /* Debug */,
+				7A4240E827FFBA5A00594598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
