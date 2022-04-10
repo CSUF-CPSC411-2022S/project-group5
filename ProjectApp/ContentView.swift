@@ -5,36 +5,47 @@
 //  Created by Zach Hofmeister on 2/23/22.
 //
 
-import SwiftUI
 import RealityKit
+import SwiftUI
+
+struct SquareView: View {
+    var body: some View {
+        Text("Hello")
+            .frame(minWidth: 60, minHeight: 60)
+            .background(Color.gray)
+            .padding(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
+    }
+}
+
+struct GridView: View {
+    let exGrid = Grid(cols: 4, rows: 4,path: "OXXOOOXOOXXOXOOOO")
+    var body: some View {
+       
+        VStack {
+            
+        }
+    }
+}
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        VStack {
+            SquareView()
+            SquareView()
+        }
     }
 }
 
-struct ARViewContainer: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> ARView {
-        
-        let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
-        return arView
-        
-    }
-    
-    func updateUIView(_ uiView: ARView, context: Context) {}
-    
-}
+//
+// struct ARViewContainer: UIViewRepresentable {
+//
+//    func makeUIView(context: Context) -> ARView {
+//        return Arrow.shared.arViewp
+//    }
+//
+//    func updateUIView(_ uiView: ARView, context: Context) {}
+//
+// }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

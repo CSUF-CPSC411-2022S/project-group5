@@ -8,7 +8,7 @@ import Foundation
 import RealityKit
 import Combine
 
-final class Arrow: ObservableObject {
+class Arrow: ObservableObject {
     enum Directions {
         case North
         case South
@@ -16,18 +16,19 @@ final class Arrow: ObservableObject {
         case West
     }
     
-    static var shared = Arrow()
-    @Published var arView: ARView!
-    @Published var enableAR = false
-    @Published var xTranslation: Float = 0 {
-        didSet{translateArrow()}
-    }
-    @Published var yTranslation: Float = 0 {
-        didSet{translateArrow()}
-    }
-    @Published var zTranslation: Float = 0 {
-        didSet{translateArrow()}
-    }
+//  AR members
+//    static var shared = Arrow()
+//    @Published var arView: ARView!
+//    @Published var enableAR = false
+//    @Published var xTranslation: Float = 0 {
+//        didSet{translateArrow()}
+//    }
+//    @Published var yTranslation: Float = 0 {
+//        didSet{translateArrow()}
+//    }
+//    @Published var zTranslation: Float = 0 {
+//        didSet{translateArrow()}
+//    }
     
     var Coords: [String: [Float]] = [:]
     var LatDir: Directions {
@@ -50,22 +51,22 @@ final class Arrow: ObservableObject {
         Coords["AnchorOne"] = anchorOne
         Coords["AnchorTwo"] = anchorTwo
     }
+//    AR Functions
+//    init(){
+//        arView = ARView(frame: .zero)
+//        let boxAnchor = try! Experience.loadBox()
+//        arView.scene.anchors.append(boxAnchor)
+//    }
     
-    init(){
-        arView = ARView(frame: .zero)
-        let boxAnchor = try! Experience.loadBox()
-        arView.scene.anchors.append(boxAnchor)
-    }
-    
-    func translateArrow(){
-        if let arrowYellow = (arView.scene.anchors[0] as? Experience.Box)?.arrowYellow {
-            let xTranslationM = xTranslation / 100
-            let yTranslationM = yTranslation / 100
-            let zTranslationM = zTranslation / 100
-            
-            let translation = SIMD3<Float>(xTranslationM, yTranslationM, zTranslationM)
-            arrowYellow.transform.translation = translation
-        }
-    }
+//    func translateArrow(){
+//        if let arrowYellow = (arView.scene.anchors[0] as? Experience.Box)?.arrowYellow {
+//            let xTranslationM = xTranslation / 100
+//            let yTranslationM = yTranslation / 100
+//            let zTranslationM = zTranslation / 100
+//
+//            let translation = SIMD3<Float>(xTranslationM, yTranslationM, zTranslationM)
+//            arrowYellow.transform.translation = translation
+//        }
+//    }
 }
 
