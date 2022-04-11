@@ -9,9 +9,11 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var name: String = ""
-    @State var major: String = ""
-    @State var Id_sample: String = " "
+   @SceneStorage("name") var name: String = ""
+    @SceneStorage("major") var major: String = ""
+    @SceneStorage("Id_sample") var Id_sample: String = " "
+    //use for the navagation link 
+    @State private var go_to_next = false
             
             
             
