@@ -12,15 +12,16 @@ class MapAgent: ObservableObject {
     @Published var strLatitude: String
     @Published var strLongitude: String
     @Published var strDirection: String
-    @Published var strRange: String
+    var range: Double
+    var fieldOfView: Double
     
     var coordinates: Coordinates {
         get {
-            return Coordinates(lat: Double(strLatitude) ?? 0.0, long: Double(strLongitude) ?? 0.0)
+            return Coordinates(lat: Double(strLatitude) ?? 0.0, lon: Double(strLongitude) ?? 0.0)
         }
         set(newCoords) {
-            strLatitude = String(newCoords.latitude)
-            strLongitude = String(newCoords.longitude)
+            strLatitude = String(newCoords.lat)
+            strLongitude = String(newCoords.lon)
         }
     }
     
@@ -33,36 +34,30 @@ class MapAgent: ObservableObject {
         }
     }
     
-    var range: Double {
-        get {
-            return Double(strRange) ?? 0.0
-        }
-        set(newRange) {
-            strRange = String(newRange)
-        }
-    }
-    
-    init(strLatitude: String = "0.0", strLongitude: String = "0.0", strDirection: String = "0.0", strRange: String = "0.0") {
-        self.strLatitude = strLatitude
-        self.strLongitude = strLongitude
-        self.strDirection = strDirection
-        self.strRange = strRange
-    }
-    
-    init(coords coordinates: Coordinates, dir direction: Double = 0.0, range: Double = 0.0) {
-        self.strLatitude = String(coordinates.latitude)
-        self.strLongitude = String(coordinates.longitude)
+    init(coords coordinates: Coordinates = Coordinates(), dir direction: Double = 0.0, range: Double = 2.0, fov fieldOfView: Double = 60.0) {
+        self.strLatitude = String(coordinates.lat)
+        self.strLongitude = String(coordinates.lon)
         self.strDirection = String(direction)
-        self.strRange = String(range)
+        self.range = range
+        self.fieldOfView = fieldOfView
     }
     
     func isInRangeOf(otherCoords: Coordinates) -> Bool {
-        return coordinates.distanceTo(otherCoords: otherCoords) <= range
+        return coordinates.distanceTo(other: otherCoords) <= range
+    }
+    
+    func isInDirectionOf(otherCoords: Coordinates) -> Bool {
+        let angleTo = coordinates.bearingTo(other: otherCoords)
+        return abs(direction - angleTo) < fieldOfView
+    }
+    
+    func isLookingAt(otherCoords: Coordinates) -> Bool {
+        return isInRangeOf(otherCoords: otherCoords) && isInDirectionOf(otherCoords: otherCoords)
     }
     
     static func ==(lhs: MapAgent, rhs: MapAgent) -> Bool {
         return lhs.strLatitude == rhs.strLatitude && lhs.strLongitude == rhs.strLongitude
-            && lhs.strDirection == rhs.strDirection && lhs.strRange == rhs.strRange
+        && lhs.strDirection == rhs.strDirection && lhs.range == rhs.range && lhs.fieldOfView == rhs.fieldOfView
     }
 }
 
@@ -86,11 +81,10 @@ struct MapAgentForm: View {
                 TextField("Direction", text: $agent.strDirection)
                 Spacer()
             }
-            HStack {
-                Text("Range:")
-                TextField("Range", text: $agent.strRange)
-                Spacer()
-            }
+            DirectionTri()
+                .fill(.blue)
+                .rotationEffect(.degrees(-agent.direction))
+                .frame(width: 50, height: 50)
         }
     }
 }
@@ -101,11 +95,12 @@ struct MapAgentDisplay: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Latitude: \(String(format: "%.2f", agent.coordinates.latitude))")
-                Text("Longitude: \(String(format: "%.2f", agent.coordinates.longitude))")
+                Text("Latitude: \(String(format: "%.2f", agent.coordinates.lat))")
+                Text("Longitude: \(String(format: "%.2f", agent.coordinates.lon))")
             }
             Text("Direction: \(String(format: "%.2f", agent.direction))")
             Text("Range: \(String(format: "%.2f", agent.range))")
+            Text("FOV: \(String(format: "%.2f", agent.fieldOfView))")
         }.padding().background(Color.blue)
     }
 }
