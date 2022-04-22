@@ -87,12 +87,12 @@ struct GridView: View {
         }
         let EndX_string : Int = Int(EndX) ?? 0
         let EndY_string : Int = Int(EndY) ?? 0
-        if _index == EndY_string * 8 + EndX_string {
+        if _index == EndX_string * 8 + EndY_string {
             color = Color.red
         }
         let startX_string : Int = Int(startX) ?? 0
         let startY_string : Int = Int(startY) ?? 0
-        if _index == startY_string * 8 + startX_string{
+        if _index == startX_string * 8 + startY_string{
             color = Color.green
         }
         
