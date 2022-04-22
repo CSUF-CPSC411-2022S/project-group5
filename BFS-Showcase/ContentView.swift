@@ -9,13 +9,44 @@ import SwiftUI
 import Combine
 
 
-struct ContentView: View {
+struct ContentView: View{
+    var body: some View{
+    VStack{
+        TabView{
+            firstView()
+                .tabItem{
+                    Image(systemName: "info")
+                    Text("First")
+                    
+                }
+            GridView()
+                .tabItem{
+                    Image(systemName: "car")
+                    Text("Pathfinding")
+                }
+        }
+    }
+    }
+}
+
+struct firstView: View{
+    var body: some View{
+    VStack{
+        Text("Welcome to the pathfinding app!").font(.title)
+        Text("This app is to be used for navigation at CSUF")
+        Image("csuf").resizable().scaledToFit().frame(width:400)
+        }
+    }
+}
+struct GridView: View {
     
     @State var pathTiles:Array<MazeLocation> = []
     @State var currentPos:MazeLocation = MazeLocation(row: 0, col: 0)
     @State var selectedNumber:Int = 0
-    @SceneStorage ("StartX") var startX : String = ""
-    @SceneStorage ("StartY") var startY: String = ""
+    @SceneStorage ("StartX") var startX : String = "0"
+    @SceneStorage ("StartY") var startY: String = "0"
+    @SceneStorage ("EndX") var EndX: String = "0"
+    @SceneStorage ("EndY") var EndY: String = "0"
     var map:Array<Int> = [
         1, 1, 1, 1, 1, 1, 1, 1,
         1, 0, 0, 0, 1, 0, 0, 1,
@@ -45,7 +76,7 @@ struct ContentView: View {
     }
     
     func getColor(index:Int, innerIndex:Int) -> Color {
-        let _index = index*8+innerIndex
+        let _index = index*8+innerIndex // Use this for green fill index * startX + startY
         var color:Color = .white
         
         if index%2 == 0 {
@@ -54,10 +85,14 @@ struct ContentView: View {
         else {
             color = _index%2 != 0 ? Color.purple : Color.orange
         }
-        if _index == 63 {
+        let EndX_string : Int = Int(EndX) ?? 0
+        let EndY_string : Int = Int(EndY) ?? 0
+        if _index == EndY_string * 8 + EndX_string {
             color = Color.red
         }
-        if _index == Int(startY) && innerIndex == Int(startX){
+        let startX_string : Int = Int(startX) ?? 0
+        let startY_string : Int = Int(startY) ?? 0
+        if _index == startY_string * 8 + startX_string{
             color = Color.green
         }
         
@@ -108,6 +143,8 @@ struct ContentView: View {
             Text("Please input starting coordinates")
             TextField("Start point X", text: $startX)
             TextField("Start point Y", text: $startY)
+            TextField("End point X", text: $EndX)
+            TextField("End point Y", text: $EndY)
             ForEach(0..<8, id: \.self) { index in
                 HStack(spacing: 0){
                     ForEach(0..<8, id: \.self) { innerIndex in
