@@ -18,20 +18,24 @@ struct SquareView: View {
 }
 
 struct GridView: View {
-    let exGrid = Grid(cols: 4, rows: 4,path: "OXXOOOXOOXXOXOOOO")
+    let exGrid = Grid(cols: 4, rows: 4, path: "OXXOOOXOOXXOXOOOO")
     var body: some View {
-       
         VStack {
-            
+            ForEach(exGrid.grid_path){
+                    
+                }
+            }
         }
+    }
+    func printGrid(){
+        print(exGrid.grid_path)
     }
 }
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            SquareView()
-            SquareView()
+            GridView()
         }
     }
 }

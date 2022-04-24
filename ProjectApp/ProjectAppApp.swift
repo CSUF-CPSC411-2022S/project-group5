@@ -16,4 +16,3 @@ struct ProjectAppApp: App {
         }
     }
 }
-
