@@ -15,7 +15,7 @@ class MapAgent: ObservableObject {
     var range: Double
     var fieldOfView: Double
     
-    var coordinates: Coordinates {
+    var coords: Coordinates {
         get {
             return Coordinates(lat: Double(strLatitude) ?? 0.0, lon: Double(strLongitude) ?? 0.0)
         }
@@ -43,11 +43,11 @@ class MapAgent: ObservableObject {
     }
     
     func isInRangeOf(otherCoords: Coordinates) -> Bool {
-        return coordinates.distanceTo(other: otherCoords) <= range
+        return coords.distanceTo(other: otherCoords) <= range
     }
     
     func isInDirectionOf(otherCoords: Coordinates) -> Bool {
-        let angleTo = coordinates.bearingTo(other: otherCoords)
+        let angleTo = coords.bearingTo(other: otherCoords)
         return abs(direction - angleTo) < fieldOfView
     }
     
@@ -95,8 +95,8 @@ struct MapAgentDisplay: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Latitude: \(String(format: "%.2f", agent.coordinates.lat))")
-                Text("Longitude: \(String(format: "%.2f", agent.coordinates.lon))")
+                Text("Latitude: \(String(format: "%.2f", agent.coords.lat))")
+                Text("Longitude: \(String(format: "%.2f", agent.coords.lon))")
             }
             Text("Direction: \(String(format: "%.2f", agent.direction))")
             Text("Range: \(String(format: "%.2f", agent.range))")

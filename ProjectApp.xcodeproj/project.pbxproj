@@ -15,6 +15,7 @@
 		920625C227C6B6E5008BE8B5 /* ProjectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625C127C6B6E5008BE8B5 /* ProjectAppUITests.swift */; };
 		920625C427C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625C327C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift */; };
 		920625D127C6B7AA008BE8B5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 920625D027C6B7AA008BE8B5 /* .gitignore */; };
+		9258D500281B2F85000FB1C3 /* NearbyBuildingsTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258D4FF281B2F85000FB1C3 /* NearbyBuildingsTourView.swift */; };
 		92A171A727D9FD6E005D4E7D /* MapAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A171A627D9FD6E005D4E7D /* MapAgent.swift */; };
 		92A82BC327C6FD2300473601 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A82BC227C6FD2300473601 /* Building.swift */; };
 		92D2F9612811ECAF00BDE7F0 /* DirectionShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D2F9602811ECAF00BDE7F0 /* DirectionShape.swift */; };
@@ -50,6 +51,7 @@
 		920625C127C6B6E5008BE8B5 /* ProjectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppUITests.swift; sourceTree = "<group>"; };
 		920625C327C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		920625D027C6B7AA008BE8B5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9258D4FF281B2F85000FB1C3 /* NearbyBuildingsTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyBuildingsTourView.swift; sourceTree = "<group>"; };
 		92A171A627D9FD6E005D4E7D /* MapAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAgent.swift; sourceTree = "<group>"; };
 		92A82BC227C6FD2300473601 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		92D2F9602811ECAF00BDE7F0 /* DirectionShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionShape.swift; sourceTree = "<group>"; };
@@ -105,14 +107,11 @@
 		920625A527C6B6E3008BE8B5 /* ProjectApp */ = {
 			isa = PBXGroup;
 			children = (
+				9258D4FE281B2D3B000FB1C3 /* NearbyBuildings */,
 				920625A627C6B6E3008BE8B5 /* ProjectAppApp.swift */,
 				920625A827C6B6E3008BE8B5 /* ContentView.swift */,
 				920625AA27C6B6E4008BE8B5 /* Assets.xcassets */,
 				920625AC27C6B6E4008BE8B5 /* Preview Content */,
-				92A82BC227C6FD2300473601 /* Building.swift */,
-				92FC975F27EC5A8A007C7014 /* Coordinates.swift */,
-				92A171A627D9FD6E005D4E7D /* MapAgent.swift */,
-				92D2F9602811ECAF00BDE7F0 /* DirectionShape.swift */,
 			);
 			path = ProjectApp;
 			sourceTree = "<group>";
@@ -140,6 +139,18 @@
 				920625C327C6B6E5008BE8B5 /* ProjectAppUITestsLaunchTests.swift */,
 			);
 			path = ProjectAppUITests;
+			sourceTree = "<group>";
+		};
+		9258D4FE281B2D3B000FB1C3 /* NearbyBuildings */ = {
+			isa = PBXGroup;
+			children = (
+				92A171A627D9FD6E005D4E7D /* MapAgent.swift */,
+				92A82BC227C6FD2300473601 /* Building.swift */,
+				92FC975F27EC5A8A007C7014 /* Coordinates.swift */,
+				92D2F9602811ECAF00BDE7F0 /* DirectionShape.swift */,
+				9258D4FF281B2F85000FB1C3 /* NearbyBuildingsTourView.swift */,
+			);
+			path = NearbyBuildings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 				92A171A727D9FD6E005D4E7D /* MapAgent.swift in Sources */,
 				92D2F9612811ECAF00BDE7F0 /* DirectionShape.swift in Sources */,
 				920625A727C6B6E3008BE8B5 /* ProjectAppApp.swift in Sources */,
+				9258D500281B2F85000FB1C3 /* NearbyBuildingsTourView.swift in Sources */,
 				92FC976027EC5A8A007C7014 /* Coordinates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

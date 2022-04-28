@@ -25,7 +25,7 @@ class ProjectAppTests: XCTestCase {
     
     func testMapAgentInitValues() {
         let agentCoords = MapAgent(coords: Coordinates(lat: 1, lon: 1), dir: 1, range: 1, fov: 1)
-        XCTAssert(agentCoords.coordinates == Coordinates(lat: 1, lon: 1) && agentCoords.direction == 1 && agentCoords.range == 1 && agentCoords.fieldOfView == 1)
+        XCTAssert(agentCoords.coords == Coordinates(lat: 1, lon: 1) && agentCoords.direction == 1 && agentCoords.range == 1 && agentCoords.fieldOfView == 1)
     }
     
     func testMapAgentRangeOf() {

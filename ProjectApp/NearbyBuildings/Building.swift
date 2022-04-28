@@ -10,11 +10,11 @@ import Foundation
 class Building {
     var name: String
     var description: String
-    var coordinates: Coordinates
+    var coords: Coordinates
     
-    init(named name: String = "", for description: String = "", at coordinates: Coordinates = Coordinates()) {
+    init(named name: String = "", for description: String = "", at coords: Coordinates = Coordinates()) {
         self.name = name;
         self.description = description;
-        self.coordinates = coordinates;
+        self.coords = coords;
     }
 }
