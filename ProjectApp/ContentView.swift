@@ -18,7 +18,6 @@ struct ContentView: View {
             
             
     var body: some View {
-        
         NavigationView {
             GeometryReader { geometry in
                 VStack {
