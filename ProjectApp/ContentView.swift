@@ -25,7 +25,7 @@ struct ContentView: View {
                    
                     VStack {
                         //Text("SafeWalk Volunteer")//.font(.headline)
-                        Text("Welcome to AppName :)")
+                        Text("Welcome to CSUF Explore!")
                             .fontWeight(.bold)
     
                             .modifier(WelcomeToAppName())
@@ -90,7 +90,7 @@ struct ContentView: View {
                     
                     //adding"starting tour button", going to next page once clicked
                     VStack{
-                        NavigationLink(destination: AppInfoOutline()) {
+                        NavigationLink(destination: AppInfo()) {
                             
                             Text("Begin the Tour").font(.footnote).modifier(ButtonDesign())
                     

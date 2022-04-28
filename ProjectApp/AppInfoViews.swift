@@ -15,10 +15,13 @@ struct Element: Identifiable {
     var description: String?
 }
 
-struct AppInfoOutline: View {
+
+
+// to display the outline
+struct AppInfo: View {
+    
     @State var search = ""
-    @State var info = [
-        Element(name: "AR Buildings", description: "add detailed info later"),
+    @State var info = [Element(name: "AR Buildings", description: "add detailed info later"),
         Element(name: "3D Model", description: "add detailed info later"),
         Element(name: "Path Finder",description: "add detailed info later")
     ]

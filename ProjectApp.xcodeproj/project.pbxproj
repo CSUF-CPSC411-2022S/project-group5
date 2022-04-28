@@ -18,7 +18,6 @@
 		C424FA3727FAC2E9002F0B0C /* AppInfoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424FA3627FAC2E9002F0B0C /* AppInfoViews.swift */; };
 		C424FA3927FAD212002F0B0C /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424FA3827FAD212002F0B0C /* Modifier.swift */; };
 		C424FA3F28041328002F0B0C /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424FA3E28041327002F0B0C /* AppInfo.swift */; };
-		C4EC999227C6FE66001ED77D /* UIpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC999127C6FE66001ED77D /* UIpage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +52,6 @@
 		C424FA3627FAC2E9002F0B0C /* AppInfoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViews.swift; sourceTree = "<group>"; };
 		C424FA3827FAD212002F0B0C /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		C424FA3E28041327002F0B0C /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
-		C4EC999127C6FE66001ED77D /* UIpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIpage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 				920625A827C6B6E3008BE8B5 /* ContentView.swift */,
 				920625AA27C6B6E4008BE8B5 /* Assets.xcassets */,
 				920625AC27C6B6E4008BE8B5 /* Preview Content */,
-				C4EC999127C6FE66001ED77D /* UIpage.swift */,
 				C424FA3627FAC2E9002F0B0C /* AppInfoViews.swift */,
 				C424FA3827FAD212002F0B0C /* Modifier.swift */,
 			);
@@ -276,7 +273,6 @@
 				C424FA3727FAC2E9002F0B0C /* AppInfoViews.swift in Sources */,
 				920625A927C6B6E3008BE8B5 /* ContentView.swift in Sources */,
 				920625A727C6B6E3008BE8B5 /* ProjectAppApp.swift in Sources */,
-				C4EC999227C6FE66001ED77D /* UIpage.swift in Sources */,
 				C424FA3927FAD212002F0B0C /* Modifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
