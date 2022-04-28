@@ -38,8 +38,6 @@ struct ContentView: View {
                             TextField("Name", text: $name)
                             Spacer()
                         }
-                      
-                        
                         HStack {
                             Spacer()
                             Text("Major: ").modifier(MajorText())
@@ -54,8 +52,6 @@ struct ContentView: View {
                             Text("🌟Tour Pass🌟" )
                                 .fontWeight(.bold)
                                 .modifier(TourPass())
-                                
-                            
                         }
                         
                         
@@ -93,11 +89,12 @@ struct ContentView: View {
                         NavigationLink(destination: AppInfo()) {
                             
                             Text("Begin the Tour").font(.footnote).modifier(ButtonDesign())
+                            
                     
                         }
                             
                     }
-                                
+                   
                     Spacer()
                 }.frame(height: geometry.size.height / 1)
                     Spacer()
@@ -202,8 +199,6 @@ struct MajorText: ViewModifier {
 }
 
 }
-
-
 
 struct ButtonDesign: ViewModifier {
     func body(content: Content) -> some View {

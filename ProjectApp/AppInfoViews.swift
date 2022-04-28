@@ -30,17 +30,15 @@ struct AppInfo: View {
             
             VStack {
                 TextField("Search", text: $search)
-                List{
-                    ForEach(info){
-                        element in
-                        if element.name == search {
-                            Text(element.name)
-                        }
+                //List{
+                    //ForEach(info){
+                        //element in
+                        //if element.name == search {
+                            //Text(element.name)
+                        //}
                         
-                    }
-                }
-                
-                
+                    //}
+               // }
                 List(info) {
                     element in
                     if let description = element.description {
@@ -51,21 +49,33 @@ struct AppInfo: View {
                         Text("\(element.name)")
                     }
                 }
-                Spacer()
+                //Spacer()
+                TabView{
+                    //our three features' tabview
+                    AppInfo()// will change to teammate's struct/class
+                        .tabItem{ //for ARbuilding
+                            Image(systemName:"building")
+                            Text("AR Building")
+                        }
+                        //for 3D Model
+                        .tabItem{
+                            Image(systemName:"square.stack.3d.up")
+                            Text("3D Model")
+                        }
+                        //for path finding
+                        .tabItem{
+                            Image(systemName:"arrow.swap")
+                            Text("Path Finder")
+                        
+                        }
+                            
+                       
+                    
+                }
             }
         }
     }
 }
 
-//struct TourPass: ViewModifier {
-   //func body(content: Content) -> some View {
-        //content
-           //.font(.custom("Courier New", size: 20))
-          // .foregroundColor(Color.white)
-           //.padding()
-           //.background(Color.brown)
-           //.cornerRadius(10)
-           //.padding(.top, 120.0)
-           //.hueRotation(Angle(degrees: 50))
-   //}
-//}
+
+
