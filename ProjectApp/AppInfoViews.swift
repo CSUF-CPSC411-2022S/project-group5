@@ -50,24 +50,24 @@ struct AppInfo: View {
                     }
                 }
                 //Spacer()
-                TabView{
+                //TabView{
                     //our three features' tabview
-                    AppInfo()// will change to teammate's struct/class
-                        .tabItem{ //for ARbuilding
-                            Image(systemName:"building")
-                            Text("AR Building")
-                        }
+                    //AppInfo()// will change to teammate's struct/class
+                        //.tabItem{ //for ARbuilding
+                            //Image(systemName:"building")
+                            //Text("AR Building")
+                        //}
                         //for 3D Model
-                        .tabItem{
-                            Image(systemName:"square.stack.3d.up")
-                            Text("3D Model")
-                        }
+                        //.tabItem{
+                            //Image(systemName:"square.stack.3d.up")
+                            //Text("3D Model")
+                        //}
                         //for path finding
-                        .tabItem{
-                            Image(systemName:"arrow.swap")
-                            Text("Path Finder")
+                        //.tabItem{
+                            //Image(systemName:"arrow.swap")
+                            //Text("Path Finder")
                         
-                        }
+                       // }
                             
                        
                     
@@ -75,7 +75,6 @@ struct AppInfo: View {
             }
         }
     }
-}
 
 
 
