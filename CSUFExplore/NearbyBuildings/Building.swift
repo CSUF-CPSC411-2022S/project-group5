@@ -1,6 +1,6 @@
 //
 //  Building.swift
-//  ProjectApp
+//  CSUFExplore
 //
 //  Created by Zach Hofmeister on 2/23/22.
 //

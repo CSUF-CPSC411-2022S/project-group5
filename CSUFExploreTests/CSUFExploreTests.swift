@@ -1,14 +1,14 @@
 //
-//  ProjectAppTests.swift
-//  ProjectAppTests
+//  CSUFExploreTests.swift
+//  CSUFExploreTests
 //
 //  Created by Zach Hofmeister lon 2/23/22.
 //
 
 import XCTest
-@testable import ProjectApp
+@testable import CSUFExplore
 
-class ProjectAppTests: XCTestCase {
+class CSUFExploreTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocatilon of each test method in the class.
@@ -41,7 +41,7 @@ class ProjectAppTests: XCTestCase {
     
     func testBuildingInitValues() {
         let building = Building(named: "bldg", for: "stuff", at: Coordinates(lat: 1, lon: 1))
-        XCTAssert((building.name == "bldg" && building.description == "stuff" && building.coordinates.lat == 1 && building.coordinates.lon == 1))
+        XCTAssert((building.name == "bldg" && building.description == "stuff" && building.coords.lat == 1 && building.coords.lon == 1))
     }
     
     func testCoordinatesInit() {

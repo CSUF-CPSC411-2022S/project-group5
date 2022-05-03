@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  ProjectApp
+//  CSUFExplore
 //
 //  Created by Zach Hofmeister on 2/23/22.
 //
@@ -9,95 +9,65 @@ import SwiftUI
 
 
 struct ContentView: View {
-   @SceneStorage("name") var name: String = ""
+    @SceneStorage("name") var name: String = ""
     @SceneStorage("major") var major: String = ""
     @SceneStorage("Id_sample") var Id_sample: String = " "
     //use for the navagation link 
     @State private var go_to_next = false
-            
-            
-            
+    
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 VStack {
-                   
+                    Text("Welcome to CSUF Explore!")
+                        .fontWeight(.bold)
+                        .modifier(WelcomeToAppName())
+                    HStack {
+                        Spacer()
+                        Text("Name: ").modifier(NameText())
+                        TextField("Name", text: $name)
+                    }
+                    HStack {
+                        Spacer()
+                        Text("Major: ").modifier(MajorText())
+                        TextField("Major", text: $major)
+                        
+                    }
+                    
+                    // starting point for ID sample display
+                    Text("🌟Tour Pass🌟" )
+                        .fontWeight(.bold)
+                        .modifier(TourPass())
+                    
                     VStack {
-                        //Text("SafeWalk Volunteer")//.font(.headline)
-                        Text("Welcome to CSUF Explore!")
+                        Text("Virtual Tour | CSUF")
                             .fontWeight(.bold)
-    
-                            .modifier(WelcomeToAppName())
-                           
-
-                        
+                            .modifier(TitleText())
                         HStack {
-                            Spacer()
-                            Text("Name: ").modifier(NameText())
-                            TextField("Name", text: $name)
-                            Spacer()
-                        }
-                        HStack {
-                            Spacer()
-                            Text("Major: ").modifier(MajorText())
-                            TextField("Major", text: $major)
-                            Spacer()
-                            
-                        }
-                        
-                        
-                        // starting point for ID sample display
-                        VStack {
-                            Text("🌟Tour Pass🌟" )
-                                .fontWeight(.bold)
-                                .modifier(TourPass())
-                        }
-                        
-                        
-                        VStack {
-                            Text("Virtual Tour | CSUF")
-                                .fontWeight(.bold)
-                                .modifier(TitleText())
-                                
-                            
-                            HStack {
-                               
-                                Text("🤓").modifier(emojiText())
-                                VStack{
-                                    HStack {
-                                        Spacer()
-                                        TextField("Name", text: $name)
-                                        Spacer()
-                                    }
-                                    HStack {
-                                        Spacer()
-                                        Text("Major: ").fontWeight(.bold)
-                                        TextField("Major", text:$major)
-                                        Spacer()
-                                    }
-                                    
+                            Text("🤓").modifier(emojiText())
+                            VStack{
+                                HStack {
+                                    Spacer()
+                                    TextField("Name", text: $name)
+                                    Spacer()
+                                }
+                                HStack {
+                                    Spacer()
+                                    Text("Major: ").fontWeight(.bold)
+                                    TextField("Major", text:$major)
+                                    Spacer()
                                 }
                             }
-                        }.modifier(IdSampleText())
-                            
-                            
-                    }
-                    
-                    //adding"starting tour button", going to next page once clicked
-                    VStack{
-                        NavigationLink(destination: AppInfo()) {
-                            
-                            Text("Begin the Tour").font(.footnote).modifier(ButtonDesign())
-                            
-                    
                         }
-                            
+                    }.modifier(IdSampleText())
+                    
+                    //adding "starting tour button", going to next page once clicked
+                    NavigationLink(destination: AppInfo()) {
+                        Text("Begin the Tour").font(.footnote).modifier(ButtonDesign())
                     }
-                   
                     Spacer()
                 }.frame(height: geometry.size.height / 1)
-                    Spacer()
-                    
+                Spacer()
             }
         }
     }

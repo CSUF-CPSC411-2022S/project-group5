@@ -1,6 +1,6 @@
 //
 //  AppInfoViews.swift
-//  ProjectApp
+//  CSUFExplore
 //
 //  Created by Summer on 4/3/22.
 //

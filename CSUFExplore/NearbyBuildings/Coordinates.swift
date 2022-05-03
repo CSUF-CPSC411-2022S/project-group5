@@ -1,6 +1,6 @@
 //
 //  Coordinates.swift
-//  ProjectApp
+//  CSUFExplore
 //
 //  Created by Zach Hofmeister on 3/24/22.
 //
