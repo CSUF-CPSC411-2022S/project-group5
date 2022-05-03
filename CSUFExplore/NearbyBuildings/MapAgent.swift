@@ -1,6 +1,6 @@
 //
 //  MapAgent.swift
-//  ProjectApp
+//  CSUFExplore
 //
 //  Created by Zach Hofmeister on 3/10/22.
 //

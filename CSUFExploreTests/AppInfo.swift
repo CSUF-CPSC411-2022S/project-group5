@@ -1,6 +1,6 @@
 //
 //  AppInfo.swift
-//  ProjectAppTests
+//  CSUFExploreTests
 //
 //  Created by Summer on 4/11/22.
 //
