@@ -7,12 +7,35 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
+    var body: some View {
+        TabView {
+            NearbyBuildingsTour()
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Nearby")
+                }
+            ProfileScreen()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Profile")
+                }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewInterfaceOrientation(.portrait)
+    }
+}
+
+struct ProfileScreen: View {
     @SceneStorage("name") var name: String = ""
     @SceneStorage("major") var major: String = ""
     @SceneStorage("Id_sample") var Id_sample: String = " "
-    //use for the navagation link 
+    //use for the navagation link
     @State private var go_to_next = false
     
     var body: some View {
@@ -71,13 +94,6 @@ struct ContentView: View {
             }
         }
     }
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
 struct WelcomeToAppName: ViewModifier {
    func body(content: Content) -> some View {
