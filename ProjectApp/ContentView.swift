@@ -17,16 +17,6 @@ struct ContentView: View {
     }
 }
 
-//
-// struct ARViewContainer: UIViewRepresentable {
-//
-//    func makeUIView(context: Context) -> ARView {
-//        return Arrow.shared.arViewp
-//    }
-//
-//    func updateUIView(_ uiView: ARView, context: Context) {}
-//
-// }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
