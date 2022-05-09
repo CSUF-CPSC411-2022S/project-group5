@@ -35,13 +35,13 @@ class ArrowTest: XCTestCase {
     
     
       func testArrowNorthWest(){
-          let newArrow = Arrow(anchorOne: [25.0, 23.0], anchorTwo: [25.0, 23.0])
+          let newArrow = ArrowController(anchorOne: [25.0, 23.0], anchorTwo: [25.0, 23.0])
           XCTAssertEqual(newArrow.LatDir, .West)
           XCTAssertEqual(newArrow.LongDir, .North)
       }
       
       func testArrowSouthEast(){
-          let newArrow = Arrow(anchorOne: [-25.0, -23.0], anchorTwo: [-25.0, -23.0])
+          let newArrow = ArrowController(anchorOne: [-25.0, -23.0], anchorTwo: [-25.0, -23.0])
           XCTAssertEqual(newArrow.LatDir, .East)
           XCTAssertEqual(newArrow.LongDir, .South)
       }

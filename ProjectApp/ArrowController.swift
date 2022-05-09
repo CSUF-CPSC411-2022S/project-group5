@@ -6,9 +6,31 @@
 
 import Foundation
 import RealityKit
+import SwiftUI
 import Combine
 
-class Arrow: ObservableObject {
+struct Arrow: Shape {
+    func path(in rect: CGRect) -> Path {
+            Path { path in
+                let width = rect.width
+                let height = rect.height
+                
+                path.addLines( [
+                    CGPoint(x: width * 0.4, y: height),
+                    CGPoint(x: width * 0.4, y: height * 0.4),
+                    CGPoint(x: width * 0.2, y: height * 0.4),
+                    CGPoint(x: width * 0.5, y: height * 0.1),
+                    CGPoint(x: width * 0.8, y: height * 0.4),
+                    CGPoint(x: width * 0.6, y: height * 0.4),
+                    CGPoint(x: width * 0.6, y: height)
+                    
+                ])
+                path.closeSubpath()
+            }
+    }
+}
+
+class ArrowController: ObservableObject {
     enum Directions {
         case North
         case South
@@ -51,13 +73,14 @@ class Arrow: ObservableObject {
         Coords["AnchorOne"] = anchorOne
         Coords["AnchorTwo"] = anchorTwo
     }
+    
+   
 //    AR Functions
 //    init(){
 //        arView = ARView(frame: .zero)
 //        let boxAnchor = try! Experience.loadBox()
 //        arView.scene.anchors.append(boxAnchor)
 //    }
-    
 //    func translateArrow(){
 //        if let arrowYellow = (arView.scene.anchors[0] as? Experience.Box)?.arrowYellow {
 //            let xTranslationM = xTranslation / 100
