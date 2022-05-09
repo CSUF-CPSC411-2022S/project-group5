@@ -53,37 +53,37 @@ class FloodFill {
         return visited
     }
     
-    func getVectorTypeBy(point:MazeLocation) -> Cell {
+    func getVectorTypeBy(point:MazeLocation) -> PCell {
         
         let maxRow = 7
         let maxCol = 7
         
         if point.row < 0 {
-            return Cell.NotFound
+            return PCell.NotFound
         }
         
         if point.col < 0 {
-            return Cell.NotFound
+            return PCell.NotFound
         }
         
         if point.row > maxRow || point.col > maxCol {
-            return Cell.NotFound
+            return PCell.NotFound
         }
         
         if map2D[point.row][point.col] == 0 {
-            return Cell.Blocked
+            return PCell.Blocked
         }
         else if map2D[point.row][point.col] == 1 {
-            return Cell.Empty
+            return PCell.Empty
         }
         else if map2D[point.row][point.col] == 2 {
-            return Cell.Goal
+            return PCell.Goal
         }
         else if map2D[point.row][point.col] == 5 {
-            return Cell.Key
+            return PCell.Key
         }
         else {
-            return Cell.NotFound
+            return PCell.NotFound
         }
     }
     
@@ -97,7 +97,7 @@ class FloodFill {
         }
         else{
             print(type)
-            if type == Cell.Blocked || type == Cell.NotFound {
+            if type == PCell.Blocked || type == PCell.NotFound {
                 return false
             }
             else {

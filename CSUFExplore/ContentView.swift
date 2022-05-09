@@ -10,15 +10,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            NearbyBuildingsTour()
-                .tabItem {
-                    Image(systemName: "map")
-                    Text("Nearby")
-                }
             ProfileScreen()
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
+                }
+            NearbyBuildingsTour()
+                .tabItem {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Nearby")
+                }
+            PathfinderView()
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Paths")
+                }
+            GridView()
+                .tabItem {
+                    Image(systemName: "arrow.up.right.diamond")
+                    Text("Directions")
                 }
         }
     }

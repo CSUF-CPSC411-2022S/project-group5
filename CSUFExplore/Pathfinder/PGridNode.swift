@@ -10,12 +10,12 @@ import Foundation
 class PGridNode {
     var x:Int = 0
     var y:Int = 0
-    var type:Cell!
+    var type:PCell!
     var opened:Bool = false
     var closed:Bool = false
     var parent:PGridNode!
     
-    init(x:Int, y:Int, type:Cell) {
+    init(x:Int, y:Int, type:PCell) {
         self.x = x
         self.y = y
         self.type = type
@@ -29,7 +29,7 @@ class PGridNode {
         return self.y
     }
     
-    func getType() -> Cell {
+    func getType() -> PCell {
         return type ?? .Empty
     }
     

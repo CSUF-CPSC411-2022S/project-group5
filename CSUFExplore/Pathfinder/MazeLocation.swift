@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Cell: Int {
+enum PCell: Int {
     case Empty = 1
     case Blocked = 0
     case Key = 5
