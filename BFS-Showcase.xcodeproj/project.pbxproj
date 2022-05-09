@@ -17,6 +17,7 @@
 		42DE281D25BD69C40060FC20 /* MazeLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE281C25BD69C40060FC20 /* MazeLocation.swift */; };
 		42DE282025BD70560060FC20 /* FloodFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE281F25BD70560060FC20 /* FloodFill.swift */; };
 		7A4240E327FFBA5A00594598 /* BFS_ShowcaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4240E227FFBA5A00594598 /* BFS_ShowcaseTests.swift */; };
+		92C0733E2829C75C00148922 /* PathfinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0733D2829C75C00148922 /* PathfinderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		42DE281F25BD70560060FC20 /* FloodFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodFill.swift; sourceTree = "<group>"; };
 		7A4240E027FFBA5A00594598 /* BFS-ShowcaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BFS-ShowcaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4240E227FFBA5A00594598 /* BFS_ShowcaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS_ShowcaseTests.swift; sourceTree = "<group>"; };
+		92C0733D2829C75C00148922 /* PathfinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfinderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				42DE281625BD69880060FC20 /* Grid.swift */,
 				42DE281925BD69A20060FC20 /* GridNode.swift */,
 				42DE281C25BD69C40060FC20 /* MazeLocation.swift */,
+				92C0733D2829C75C00148922 /* PathfinderView.swift */,
 			);
 			path = "BFS-Showcase";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				42DE281D25BD69C40060FC20 /* MazeLocation.swift in Sources */,
 				42DE281425BD696B0060FC20 /* BFS.swift in Sources */,
 				42DE281725BD69880060FC20 /* Grid.swift in Sources */,
+				92C0733E2829C75C00148922 /* PathfinderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
