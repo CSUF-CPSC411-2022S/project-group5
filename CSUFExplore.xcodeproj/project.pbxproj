@@ -82,6 +82,7 @@
 		92FC975F27EC5A8A007C7014 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		C424FA3627FAC2E9002F0B0C /* AppInfoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViews.swift; sourceTree = "<group>"; };
 		C424FA3E28041327002F0B0C /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		C4310A942829AFD400621538 /* GridArrow */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GridArrow; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
