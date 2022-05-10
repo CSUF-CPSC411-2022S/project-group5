@@ -50,82 +50,120 @@ struct ProfileScreen: View {
     
     var body: some View {
         NavigationView {
+            
+            
             GeometryReader { geometry in
                 VStack {
-                    Text("Welcome to CSUF Explore!")
-                        .fontWeight(.bold)
-                        .modifier(WelcomeToAppName())
-                    HStack {
-                        Spacer()
-                        Text("Name: ").modifier(NameText())
-                        TextField("Name", text: $name)
-                    }
-                    HStack {
-                        Spacer()
-                        Text("Major: ").modifier(MajorText())
-                        TextField("Major", text: $major)
+                    
+                    GeometryReader { geometry in
+                        HStack {
+                            Image("long")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, height:100)
+                                .padding(.top,-120)
+                                
+                        }
+                    }.frame(width: 100, height: 100, alignment: .center)
+                    //Spacer()
+                    VStack{
+                        
+                        Text("Welcome to CSUF Explore!")
+                            .fontWeight(.bold)
+                            .modifier(WelcomeToAppName())
+                            .padding(.top, -90)
+                        HStack {
+                            Spacer()
+                            Text("Name: ").modifier(NameText()).padding(.top, -50)
+                            TextField("Name", text: $name).padding(.top, -35)
+                        }
+                        HStack {
+                            Spacer()
+                            Text("Major: ").modifier(MajorText()).padding(.top, -30)
+                            TextField("Major", text: $major).padding(.top, -24)
+                            
+                        }
+                        
                         
                     }
                     
-                    // starting point for ID sample display
-                    Text("🌟Tour Pass🌟" )
-                        .fontWeight(.bold)
-                        .modifier(TourPass())
-                    
-                    VStack {
-                        Text("Virtual Tour | CSUF")
+                    GeometryReader { geometry in
+                    VStack{
+                        Text("★..Tour Pass..★" )
                             .fontWeight(.bold)
-                            .modifier(TitleText())
-                        HStack {
-                            Text("🤓").modifier(emojiText())
-                            VStack{
-                                HStack {
-                                    Spacer()
-                                    TextField("Name", text: $name)
-                                    Spacer()
-                                }
-                                HStack {
-                                    Spacer()
-                                    Text("Major: ").fontWeight(.bold)
-                                    TextField("Major", text:$major)
-                                    Spacer()
+                            .modifier(TourPass())
+                        VStack {
+                            Text("Virtual Tour | CSUF")
+                                .fontWeight(.bold)
+                                .modifier(TitleText())
+                            HStack {
+                                //Text("🤓").modifier(emojiText())
+                                Image("tuffy")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Circle())
+                                    .frame(width: 70, height:70)
+                                    .padding(.top,-10)
+                                    //.background(Color.yellow)
+                                    .hueRotation(Angle(degrees:-98))
+                                
+                                VStack{
+                                    HStack {
+                                        Spacer()
+                                        TextField("Name", text: $name)
+                                        Spacer()
+                                    }
+                                    HStack {
+                                        Spacer()
+                                        Text("Major: ").fontWeight(.bold)
+                                        TextField("Major", text:$major)
+                                        Spacer()
+                                    }
                                 }
                             }
+                        }.modifier(IdSampleText())
+                        NavigationLink(destination: AppInfo()) {
+                            Text("Begin the Tour").font(.footnote).modifier(ButtonDesign())
                         }
-                    }.modifier(IdSampleText())
+                        Spacer()
+                        //frame for tourPass section
+                    }.frame(height: geometry.size.height/2.4)
                     
-                    //adding "starting tour button", going to next page once clicked
-                    NavigationLink(destination: AppInfo()) {
-                        Text("Begin the Tour").font(.footnote).modifier(ButtonDesign())
-                    }
-                    Spacer()
-                }.frame(height: geometry.size.height / 1)
-                Spacer()
-            }
+                    
+                }
+                
+               //frame for whole screen
+                }.frame(height: geometry.size.height/1)
         }
+        }
+        
     }
 
 struct WelcomeToAppName: ViewModifier {
    func body(content: Content) -> some View {
         content
            .font(.custom("Courier New", size: 20))
-           .foregroundColor(Color.white)
+          
            .padding()
-           .background(Color.black)
-           .cornerRadius(10)
+           .foregroundColor(Color.white)
+           
+           .background(Color.yellow)
+           //.padding(.top,20)
+           .cornerRadius(30)
+           .hueRotation(Angle(degrees: -43))
    }
 }
 
 struct TourPass: ViewModifier {
    func body(content: Content) -> some View {
         content
-           .font(.custom("Courier New", size: 20))
+           .font(.custom("Courier New", size: 16))
            .foregroundColor(Color.white)
            .padding()
-           .background(Color.brown)
+           .background(Color.green)
            .cornerRadius(10)
-           .padding(.top, 120.0)
-           .hueRotation(Angle(degrees: 50))
+           .padding(.top,200)
+           .hueRotation(Angle(degrees: 90))
    }
 }
 //emoji custom view modifier
@@ -133,12 +171,12 @@ struct emojiText: ViewModifier {
     func body(content: Content) -> some View {
         content
            .font(.custom("Courier New", size: 40))
-           .foregroundColor(Color.black)
+           .foregroundColor(Color.white)
            .padding()
-           .background(Color.brown.brightness(10))
+           .background(Color.green)
            .cornerRadius(60)
-           .grayscale(/*@START_MENU_TOKEN@*/1.5/*@END_MENU_TOKEN@*/)
-           .hueRotation(Angle(degrees: 40))
+           //.grayscale(/*@START_MENU_TOKEN@*/1.5/*@END_MENU_TOKEN@*/)
+           .hueRotation(Angle(degrees: 90))
            
     }
 }
@@ -146,12 +184,13 @@ struct emojiText: ViewModifier {
 struct TitleText: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.custom("Courier New", size: 15))
+            .font(.custom("Courier New", size: 13))
             .font(Font.headline)
            .foregroundColor(Color.white)
            .padding()
-           //.background(Color.black)
+           .background(Color.yellow)
            .cornerRadius(10)
+           .hueRotation(Angle(degrees: -140))
     }
 }
 
@@ -164,10 +203,10 @@ struct IdSampleText: ViewModifier {
            .font(.custom("Courier New", size: 15))
            .foregroundColor(Color.white)
            .padding()
-           .background(Color.brown)
+           .background(Color.green)
            .cornerRadius(10)
            .padding(15)
-           .hueRotation(Angle(degrees: 50))
+           .hueRotation(Angle(degrees: 90))
     }
 }
 
@@ -178,6 +217,7 @@ struct NameText: ViewModifier {
            .font(.custom("Courier New", size: 20))
            .foregroundColor(Color.black)
            .padding()
+          // .padding(.top, 20)
            .cornerRadius(10)
     }
 }

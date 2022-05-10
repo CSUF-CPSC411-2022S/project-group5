@@ -21,15 +21,15 @@ struct Element: Identifiable {
 struct AppInfo: View {
     
     @State var search = ""
-    @State var info = [Element(name: "AR Buildings", description: "add detailed info later"),
+    @State var info = [Element(name: "AR Buildings", description: "This feature will provide you with information on the buildings that you are looking at."),
         Element(name: "3D Model", description: "add detailed info later"),
-        Element(name: "Path Finder",description: "add detailed info later")
+        Element(name: "Path Finder",description: "This feature provides you with a map of the engineering section of CSUF and also gives navigation to each building")
     ]
     var body: some View {
         NavigationView {
             
             VStack {
-                TextField("Search", text: $search)
+                TextField("Search", text: $search).padding(.top, -120)
                 //List{
                     //ForEach(info){
                         //element in
@@ -43,10 +43,10 @@ struct AppInfo: View {
                     element in
                     if let description = element.description {
                         NavigationLink(destination: Text(description)) {
-                            Text("\(element.name)")//.modifier(TourPass())
+                            Text("\(element.name)").padding(.top,-10)
                         }
                     } else {
-                        Text("\(element.name)")
+                        Text("\(element.name)").padding(.top,-10)
                     }
                 }
                 //Spacer()
@@ -69,11 +69,19 @@ struct AppInfo: View {
                         
                        // }
                             
-                       
+                Image("map2")
+                    .resizable()
+                    //.scaledToFit()
+                    .frame(width: 180, height: 260)
+                    //.overlay(Circle().stroke(lineWidth:3)
+                    //.foregroundColor(.gray))
+                    .rotationEffect(.degrees(90))
+                    //.clipShape(Circle())
                     
                 }
             }
         }
+   
     }
 
 
