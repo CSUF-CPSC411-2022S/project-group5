@@ -30,6 +30,12 @@ struct ContentView: View {
                     Image(systemName: "arrow.up.right.diamond")
                     Text("Directions")
                 }
+            WeatherView()
+                .tabItem{
+                    Image(systemName: "cloud")
+                    Text("Weather")
+                        }
+                
         }
     }
 }

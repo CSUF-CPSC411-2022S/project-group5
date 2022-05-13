@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A6EDEE8282F1465009B9707 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6EDEE7282F1465009B9707 /* Weather.swift */; };
 		920625A727C6B6E3008BE8B5 /* CSUFExploreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625A627C6B6E3008BE8B5 /* CSUFExploreApp.swift */; };
 		920625A927C6B6E3008BE8B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920625A827C6B6E3008BE8B5 /* ContentView.swift */; };
 		920625AB27C6B6E4008BE8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920625AA27C6B6E4008BE8B5 /* Assets.xcassets */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A6EDEE7282F1465009B9707 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		7A6EDEE9282F1494009B9707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		920625A327C6B6E3008BE8B5 /* CSUFExplore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSUFExplore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		920625A627C6B6E3008BE8B5 /* CSUFExploreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSUFExploreApp.swift; sourceTree = "<group>"; };
 		920625A827C6B6E3008BE8B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		92FC975F27EC5A8A007C7014 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		C424FA3627FAC2E9002F0B0C /* AppInfoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViews.swift; sourceTree = "<group>"; };
 		C424FA3E28041327002F0B0C /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
-		C4310A942829AFD400621538 /* GridArrow */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GridArrow; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		920625A527C6B6E3008BE8B5 /* CSUFExplore */ = {
 			isa = PBXGroup;
 			children = (
+				7A6EDEE9282F1494009B9707 /* Info.plist */,
 				921959EC2829CAF900FEB608 /* Pathfinder */,
 				921959E12829CAEC00FEB608 /* GridArrow */,
 				9258D4FE281B2D3B000FB1C3 /* NearbyBuildings */,
@@ -193,6 +196,7 @@
 				921959F02829CAF900FEB608 /* PGrid.swift */,
 				921959F12829CAF900FEB608 /* FloodFill.swift */,
 				921959F22829CAF900FEB608 /* BFS.swift */,
+				7A6EDEE7282F1465009B9707 /* Weather.swift */,
 			);
 			path = Pathfinder;
 			sourceTree = "<group>";
@@ -344,6 +348,7 @@
 				921959F62829CAFA00FEB608 /* PGrid.swift in Sources */,
 				921959E82829CAEC00FEB608 /* ArrowController.swift in Sources */,
 				921959E92829CAEC00FEB608 /* CellButtonView.swift in Sources */,
+				7A6EDEE8282F1465009B9707 /* Weather.swift in Sources */,
 				921959F42829CAFA00FEB608 /* MazeLocation.swift in Sources */,
 				921959F72829CAFA00FEB608 /* FloodFill.swift in Sources */,
 				921959EB2829CAEC00FEB608 /* GridView.swift in Sources */,
@@ -523,6 +528,7 @@
 				DEVELOPMENT_TEAM = PAPG96B6SC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CSUFExplore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +558,7 @@
 				DEVELOPMENT_TEAM = PAPG96B6SC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CSUFExplore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
