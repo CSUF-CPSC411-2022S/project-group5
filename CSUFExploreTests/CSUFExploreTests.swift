@@ -122,5 +122,12 @@ class GridArrowTests: XCTestCase {
         let validmoves = [CellCoord(row: 0, col: 1), CellCoord(row: 2, col: 1), CellCoord(row: 1, col: 0), CellCoord(row: 1, col: 2)]
         XCTAssertEqual(grid.getNextDirection(cur_row: 1, cur_col: 1).valid_moves, validmoves)
     }
-    
+    func testGridWidth(){
+        let grid1 = PGrid(width: 5, height: 4)
+        XCTAssertEqual(grid1.width, 5)
+    }
+    func testGridHeight(){
+        let grid1 = PGrid(width: 5, height: 4)
+        XCTAssertEqual(grid1.height, 4)
+    }
 }
