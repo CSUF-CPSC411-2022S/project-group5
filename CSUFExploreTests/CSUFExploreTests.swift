@@ -73,3 +73,54 @@ class CSUFExploreTests: XCTestCase {
         XCTAssertEqual(1, 1)
     }
 }
+
+class GridArrowTests: XCTestCase {
+    
+    func testCellCoordInit() {
+        let coord = CellCoord(row: 0, col: 0)
+        XCTAssertNotNil(coord)
+    }
+    
+    func testCellInit() {
+        let cell = Cell(symbol: "X", traveled: false, coord: CellCoord(row: 0,col: 0))
+        XCTAssertNotNil(cell)
+    }
+    
+    func testCellArrInit() {
+        let arr = CellArr()
+        XCTAssertNotNil(arr)
+    }
+    
+    func testGridInit() {
+        let grid = Grid(colNum: 3, rowNum: 3, input_path: "OXOOXOOXX", start_coords: CellCoord(row: 0, col: 0), end_coords: CellCoord(row: 2,col: 2))
+        XCTAssertNotNil(grid)
+    }
+    
+    func testPath(){
+        let grid = Grid(colNum: 3, rowNum: 3, input_path: "OXOOXOOXX", start_coords: CellCoord(row: 0, col: 0), end_coords: CellCoord(row: 2,col: 2))
+        XCTAssertEqual(grid[0, 1].symbol,"X")
+        XCTAssertEqual(grid[1, 1].symbol,"X")
+        XCTAssertEqual(grid[2, 1].symbol,"X")
+        XCTAssertEqual(grid[2, 2].symbol,"X")
+    }
+    
+    func testNextDirectionCorrect(){
+        let grid = Grid(colNum: 3, rowNum: 3, input_path: "OXOOXOOXX", start_coords: CellCoord(row: 0, col: 0), end_coords: CellCoord(row: 2,col: 2))
+        XCTAssertEqual(grid.getNextDirection(cur_row: 0, cur_col: 1).direction, 180)
+        XCTAssertEqual(grid.getNextDirection(cur_row: 1, cur_col: 1).direction, 180)
+        XCTAssertEqual(grid.getNextDirection(cur_row: 2, cur_col: 1).direction, 90)
+    }
+    
+    func testNextDirectionIncorrect(){
+        let grid = Grid(colNum: 3, rowNum: 3, input_path: "OXOOXOOXX", start_coords: CellCoord(row: 0, col: 0), end_coords: CellCoord(row: 2,col: 2))
+        XCTAssertEqual(grid.getNextDirection(cur_row: 0, cur_col: 0).direction, 90)
+        XCTAssertEqual(grid.getNextDirection(cur_row: 2, cur_col: 0).direction, 90)
+    }
+    
+    func testValidMoves(){
+        let grid = Grid(colNum: 3, rowNum: 3, input_path: "OXOOXOOXX", start_coords: CellCoord(row: 0, col: 0), end_coords: CellCoord(row: 2,col: 2))
+        let validmoves = [CellCoord(row: 0, col: 1), CellCoord(row: 2, col: 1), CellCoord(row: 1, col: 0), CellCoord(row: 1, col: 2)]
+        XCTAssertEqual(grid.getNextDirection(cur_row: 1, cur_col: 1).valid_moves, validmoves)
+    }
+    
+}
